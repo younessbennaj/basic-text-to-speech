@@ -1,0 +1,150 @@
+/* root
+-------------------- */
+:root {
+  --purple: #6326a2;
+  --electric-blue: #263fa9;
+  --dark-blue: #1c1b43;
+  --blue: #1e2a52;
+  --light-blue: #2e5b84;
+  --white: #e3e8ef;
+  --light-grey: #677489;
+  --grey: #364153;
+
+  /* color map */
+  --background-color: var(--dark-blue);
+  --text-color: var(--white);
+  --text-area-background-color: var(--blue);
+  --border-color: var(--light-blue);
+  --logo-text-size: 1.25rem;
+  --body-text-size: 1rem;
+  --small-text-size: 0.75rem;
+  --rounded-border-radius: 8px;
+
+  /* font */
+  --font-base: "Outfit", inter, system-ui, avenir, helvetica, arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-base);
+  font-size: var(--body-text-size);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+p {
+  margin: 0;
+}
+
+/* nav
+-------------------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+}
+
+.nav__title {
+  font-size: var(--logo-text-size);
+}
+
+.nav__logo {
+  height: 24px;
+}
+
+/* common
+-------------------- */
+.container {
+  margin: 0 auto;
+  padding: 0 32px;
+  padding-top: 8px;
+}
+
+/* speech form
+-------------------- */
+.speech-form {
+}
+
+.speech-form__textarea {
+  display: block;
+  padding: 20px;
+  width: 100%;
+  border-radius: var(--rounded-border-radius);
+  background-color: var(--text-area-background-color);
+  border-color: var(--border-color);
+  color: var(--text-color);
+  outline: none;
+  font-family: var(--font-base);
+  margin-bottom: 8px;
+}
+
+.speech-form__description {
+  font-size: var(--small-text-size);
+  color: var(--light-grey);
+}
+
+.speech-form__submit {
+  background: linear-gradient(90deg, var(--purple), var(--electric-blue));
+  color: var(--white);
+  border: none;
+  padding: 16px 32px;
+  border-radius: var(--rounded-border-radius);
+  cursor: pointer;
+  width: 100%;
+  font-size: var(--body-text-size);
+}
+
+/* speech form settings
+-------------------- */
+
+.speech-form__settings {
+  margin-top: 32px;
+  margin-bottom: 62px;
+}
+
+.speech-form__settings-title {
+  display: inline-block;
+  font-size: var(--small-text-size);
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.speech-form__settings-label {
+  color: var(--light-grey);
+  margin-right: 20px;
+}
+
+.speech-form__speed-area {
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+  border-radius: var(--rounded-border-radius);
+}
+
+.speech-form__radio-area {
+  display: flex;
+  gap: 8px;
+}
+
+.speech-form__radio-label {
+  padding: 8px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--rounded-border-radius);
+}
+
+.speech-form__radio:checked + .speech-form__radio-label {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  padding: 8px;
+}

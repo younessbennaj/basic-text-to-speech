@@ -3,9 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Basic Text To Speach</title>
   </head>
   <body>
-    <h1>Hello</h1>
+    <nav class="nav">
+      <span class="nav__title">Speechbot</span>
+      <img class="nav__logo" src="images/text-to-speech-logo.svg" alt="logo" />
+    </nav>
+    <div class="container">
+      <form class="speech-form" id="speech-form">
+        <textarea
+          class="speech-form__textarea"
+          name="text"
+          id="text"
+          cols="20"
+          rows="7"
+          placeholder="Enter your text"
+        ></textarea>
+        <legend class="speech-form__description">
+          Enter your text above and hit 'play.' You can choose a different voice
+          by selecting an option from the dropdown menu.
+        </legend>
+        <div class="speech-form__settings">
+          <label class="speech-form__settings-title">Settings</label>
+          <div class="speech-form__speed-area">
+            <p class="speech-form__settings-label">Speed</p>
+            <div class="speech-form__radio-area">
+              <label for="one">
+                <input
+                  class="speech-form__radio"
+                  hidden
+                  type="radio"
+                  id="one"
+                  name="choice"
+                  value="one"
+                />
+                <div class="speech-form__radio-label">0.5x</div>
+              </label>
+
+              <label for="two">
+                <input
+                  class="speech-form__radio"
+                  hidden
+                  type="radio"
+                  id="two"
+                  name="choice"
+                  value="two"
+                />
+                <div class="speech-form__radio-label">0.75x</div>
+              </label>
+
+              <label for="three">
+                <input
+                  class="speech-form__radio"
+                  hidden
+                  type="radio"
+                  id="three"
+                  name="choice"
+                  value="three"
+                />
+                <div class="speech-form__radio-label">1x</div>
+              </label>
+
+              <label for="four">
+                <input
+                  class="speech-form__radio"
+                  hidden
+                  type="radio"
+                  id="four"
+                  name="choice"
+                  value="four"
+                />
+                <div class="speech-form__radio-label">1.5x</div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <button class="speech-form__submit" id="speak">Text to speach</button>
+      </form>
+    </div>
+    <script type="module" src="index.js"></script>
   </body>
 </html>

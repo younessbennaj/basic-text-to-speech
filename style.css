@@ -19,6 +19,7 @@
   --body-text-size: 1rem;
   --small-text-size: 0.75rem;
   --rounded-border-radius: 8px;
+  --select-background-color: var(--blue);
 
   /* font */
   --font-base: "Outfit", inter, system-ui, avenir, helvetica, arial, sans-serif;
@@ -106,7 +107,7 @@ nav {
 
 .speech-form__settings {
   margin-top: 32px;
-  margin-bottom: 62px;
+  margin-bottom: 44px;
 }
 
 .speech-form__settings-title {
@@ -121,17 +122,21 @@ nav {
   margin-right: 20px;
 }
 
-.speech-form__speed-area {
+.speech-form__settings-area {
   background-color: var(--blue);
   display: flex;
   align-items: center;
   padding: 8px 20px;
   border-radius: var(--rounded-border-radius);
+  margin-bottom: 18px;
+  height: 64px;
 }
 
 .speech-form__radio-area {
   display: flex;
   gap: 8px;
+  border-left: 1px solid var(--grey);
+  padding-left: 8px;
 }
 
 .speech-form__radio-label {
@@ -141,10 +146,28 @@ nav {
   justify-content: center;
   align-items: center;
   border-radius: var(--rounded-border-radius);
+  cursor: pointer;
 }
 
 .speech-form__radio:checked + .speech-form__radio-label {
   background-color: var(--dark-blue);
   color: var(--white);
   padding: 8px;
+}
+
+.speech-form__settings-select {
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 16px 40px 16px 16px;
+  width: 120px;
+  border: none;
+  outline: none;
+  color: var(--white);
+  cursor: pointer;
+  background-image: url("images/expand.svg");
+  background-position: right 16px center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-color: var(--select-background-color);
+  border-left: 1px solid var(--grey);
 }

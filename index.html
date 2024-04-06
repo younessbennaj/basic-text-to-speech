@@ -35,41 +35,17 @@
           <label class="speech-form__settings-title">Settings</label>
           <div class="speech-form__settings-area">
             <p class="speech-form__settings-label">Voice</p>
-            <div>
+            <div style="display: flex">
               <select
                 class="speech-form__settings-select"
                 name="lang"
                 id="lang"
-              >
-                <option value="en-US">en-US</option>
-                <option value="en-GB">en-GB</option>
-                <option value="es-ES">es-ES</option>
-                <option value="fr-FR">fr-FR</option>
-                <option value="de-DE">de-DE</option>
-                <option value="it-IT">it-IT</option>
-                <option value="ja-JP">ja-JP</option>
-                <option value="ko-KR">ko-KR</option>
-                <option value="pt-BR">pt-BR</option>
-                <option value="ru-RU">ru-RU</option>
-              </select>
+              ></select>
               <select
                 class="speech-form__settings-select"
                 name="voice"
                 id="voice"
-              >
-                <option value="albert">Albert</option>
-                <option value="carla">Carla</option>
-                <option value="carmen">Carmen</option>
-                <option value="david">David</option>
-                <option value="emily">Emily</option>
-                <option value="enrique">Enrique</option>
-                <option value="fiona">Fiona</option>
-                <option value="giorgio">Giorgio</option>
-                <option value="hans">Hans</option>
-                <option value="helena">Helena</option>
-                <option value="jorge">Jorge</option>
-                <option value="kate">Kate</option>
-              </select>
+              ></select>
             </div>
           </div>
           <div class="speech-form__settings-area">
@@ -82,7 +58,7 @@
                   type="radio"
                   id="one"
                   name="choice"
-                  value="one"
+                  value="0.5"
                 />
                 <div class="speech-form__radio-label">0.5x</div>
               </label>
@@ -94,7 +70,7 @@
                   type="radio"
                   id="two"
                   name="choice"
-                  value="two"
+                  value="0.75"
                 />
                 <div class="speech-form__radio-label">0.75x</div>
               </label>
@@ -106,7 +82,8 @@
                   type="radio"
                   id="three"
                   name="choice"
-                  value="three"
+                  value="1"
+                  checked
                 />
                 <div class="speech-form__radio-label">1x</div>
               </label>
@@ -118,14 +95,14 @@
                   type="radio"
                   id="four"
                   name="choice"
-                  value="four"
+                  value="1.5"
                 />
                 <div class="speech-form__radio-label">1.5x</div>
               </label>
             </div>
           </div>
         </div>
-        <button class="speech-form__submit" id="speak">Text to speach</button>
+        <button class="speech-form__submit" id="submit">Text to speach</button>
       </form>
     </div>
     <script type="module" src="index.js"></script>

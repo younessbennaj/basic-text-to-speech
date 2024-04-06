@@ -102,6 +102,12 @@ nav {
   font-size: var(--body-text-size);
 }
 
+.speech-form__submit:disabled {
+  background: var(--light-grey);
+  color: var(--grey);
+  cursor: not-allowed;
+}
+
 /* speech form settings
 -------------------- */
 

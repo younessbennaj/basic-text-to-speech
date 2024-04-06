@@ -3,7 +3,7 @@
 <h3>
 	<a href="https://younessbennaj.github.io/basic-text-to-speech" target="_blank">Demo</a>
 	|
-	<a href="https://devchallenges.io/solution/9312" target="_blank">Solution</a>
+	<a href="https://devchallenges.io/solution/15872" target="_blank">Solution</a>
 	|
 	<a href="https://devchallenges.io/challenge/basic-text-to-speech" target="_blank">Challenge</a>
 </h3>

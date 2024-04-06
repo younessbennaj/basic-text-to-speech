@@ -68,6 +68,33 @@ nav {
   padding-top: 8px;
 }
 
+/* hero section
+-------------------- */
+.hero {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.hero__overlay {
+  background-image: url("images/hero-image-text-to-speech.png");
+  flex: 50%;
+  background-size: cover;
+  background-position: center;
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero__overlay {
+    display: block;
+  }
+}
+
+.hero__content {
+  flex: 50%;
+}
+
 /* speech form
 -------------------- */
 .speech-form {
@@ -80,15 +107,20 @@ nav {
   border-radius: var(--rounded-border-radius);
   background-color: var(--text-area-background-color);
   border-color: var(--border-color);
+  border-width: 2px;
   color: var(--text-color);
   outline: none;
   font-family: var(--font-base);
   margin-bottom: 8px;
 }
 
+.speech-form__textarea::placeholder {
+  color: var(--light-grey);
+}
+
 .speech-form__description {
   font-size: var(--small-text-size);
-  color: var(--light-grey);
+  color: var(--grey);
 }
 
 .speech-form__submit {
@@ -113,7 +145,7 @@ nav {
 
 .speech-form__settings {
   margin-top: 32px;
-  margin-bottom: 44px;
+  margin-bottom: 62px;
 }
 
 .speech-form__settings-title {
@@ -131,11 +163,27 @@ nav {
 .speech-form__settings-area {
   background-color: var(--blue);
   display: flex;
-  align-items: center;
+  flex-direction: column;
   padding: 8px 20px;
   border-radius: var(--rounded-border-radius);
   margin-bottom: 18px;
-  height: 64px;
+  row-gap: 8px;
+  height: 92px;
+}
+
+@media screen and (min-width: 420px) {
+  .speech-form__settings-area {
+    flex-direction: row;
+    align-items: center;
+    /* height: 64px; */
+    height: 52px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .speech-form__settings-area {
+    width: fit-content;
+  }
 }
 
 .speech-form__radio-area {
@@ -161,10 +209,14 @@ nav {
   padding: 8px;
 }
 
+.speech-form__settings-select-area {
+  display: flex;
+}
+
 .speech-form__settings-select {
   -webkit-appearance: none;
   appearance: none;
-  padding: 16px 40px 16px 16px;
+  padding: 8px 40px 8px 16px;
   width: 120px;
   border: none;
   outline: none;
